@@ -1,0 +1,38 @@
+#ifndef _MESSAGETYPES_H_
+#define _MESSAGETYPES_H_
+
+namespace LC
+{
+	// Time in seconds.
+	enum { keep_alive_send_interval = 2 };
+	enum { keep_alive_failure_interval = 20 };
+
+	/// The size of a fixed length header.
+	enum { header_length = 8 };
+	enum { message_type_length = 4 };
+
+	enum MessageType
+	{
+		CONNECTION_MESSAGE = 0,
+		CHAT_MESSAGE,
+		SERVER_FULL_MESSAGE,
+		SERVER_CLOSE_MESSAGE,
+		SET_NAME_MESSAGE,
+		GET_NAMES_MESSAGE,
+		CLIENT_DISCONNECT_MESSAGE,
+		GAME_START_MESSAGE,
+		CLIENT_BUTTON_PRESSED_MESSAGE,
+		CLIENT_BUTTON_RELEASED_MESSAGE,
+		CLIENT_MOVE_DIRECTION_MESSAGE,
+		SNAPSHOT_MESSAGE,
+		CLIENT_CREATE_AVATAR_MESSAGE,
+		CLIENT_CREATE_WALL_MESSAGE,
+		CLIENT_REMOVE_OBJECT_MESSAGE,
+		CLIENT_A_PLAYER_IS_DEAD_MESSAGE,
+		KEEP_ALIVE_MESSAGE,
+		RESET_GAME_MESSAGE,
+		VICTORY_MESSAGE,
+		SCORE_MESSAGE,
+	};
+}
+#endif
